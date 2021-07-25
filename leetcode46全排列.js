@@ -1,4 +1,4 @@
-
+// nums如果是字符串则用这个
 function fullpermutate(str) {
   var result = [];
   if (str.length > 1) {
