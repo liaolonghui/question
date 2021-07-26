@@ -16,7 +16,7 @@ var groupAnagrams = function(strs) {
       const arrIndex = str.charCodeAt(i) - 97
       charArr[arrIndex]++
     }
-    const key = charArr
+    const key = charArr.join(',')
     if (map.has(key)) {
       map.set(key, [...map.get(key), str])
     } else {
@@ -34,4 +34,4 @@ var groupAnagrams = function(strs) {
 };
 
 console.log(groupAnagrams(["bdddddddddd","bbbbbbbbbbc"]))
-// console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
